@@ -17,7 +17,7 @@ def isPalindrome(x):
         temp //= 10
     return reversedNum == x
 
-size = 100
+size = 10
 min_val = 1
 max_val = 999
 
