@@ -1,4 +1,8 @@
+import random
 # Учитывая целое число x, верните true, если x является палиндромом, и false в противном случае.
+
+def generate_dataset(size, min_val, max_val):
+    return [random.randint(min_val, max_val) for _ in range(size)]
 
 def isPalindrome(x):
     if x < 0:
@@ -13,12 +17,13 @@ def isPalindrome(x):
         temp //= 10
     return reversedNum == x
 
+size = 100
+min_val = 1
+max_val = 999
 
-result1 = isPalindrome(12345)
-print(result1)
+nums = generate_dataset(size, min_val, max_val)
+print("Generated numbers:", nums)
 
-result2 = isPalindrome(123321)
-print(result2)
-
-result3 = isPalindrome(-123)
-print(result3)
+for num in nums:
+    result = isPalindrome(num)
+    print(f"Is {num} a palindrome? {result}")

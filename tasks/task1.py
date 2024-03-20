@@ -1,9 +1,16 @@
+import random
 #TwoSum
 #Учитывая массив целых чисел nums и целочисленное целевое значение,
 #возвращаем индексы двух чисел таким образом, чтобы они складывались в целевое значение.
 #Вы можете предположить, что каждый вход будет иметь ровно одно решение,
 # и вы не можете использовать один и тот же элемент дважды.
 #Вы можете вернуть ответ в любом порядке.
+
+
+def generate_dataset(size, min_val, max_val):
+
+    nums = [random.randint(min_val, max_val) for _ in range(size)]
+    return nums
 
 
 def twoSum(nums, target):
@@ -15,18 +22,14 @@ def twoSum(nums, target):
     return []
 
 
+size = 10
+min_val = 1
+max_val = 100
+target = 10
 
-nums1 = [2,1,8,3]
-target1 = 9
-result1 = twoSum(nums1, target1)
-print(result1)
+nums = generate_dataset(size, min_val, max_val)
+print("Generated numbers:", nums)
+print("target:", target)
 
-nums2 = [1,1,1,1,12]
-target2 = 5
-result2 = twoSum(nums2, target2)
-print(result2)
-
-nums3 = [3,5,9,21,543,65,8]
-target3 = 11
-result3 = twoSum(nums3, target3)
-print(result3)
+result = twoSum(nums, target)
+print("Indices for target sum:", result)
