@@ -7,12 +7,6 @@ import random
 #Вы можете вернуть ответ в любом порядке.
 
 
-def generate_dataset(size, min_val, max_val):
-
-    nums = [random.randint(min_val, max_val) for _ in range(size)]
-    return nums
-
-
 def twoSum(nums, target):
     n = len(nums)
     for i in range(n - 1):
@@ -21,15 +15,3 @@ def twoSum(nums, target):
                 return [i, j]
     return []
 
-
-size = 10
-min_val = 1
-max_val = 100
-target = 10
-
-nums = generate_dataset(size, min_val, max_val)
-print("Generated numbers:", nums)
-print("target:", target)
-
-result = twoSum(nums, target)
-print("Indices for target sum:", result)
