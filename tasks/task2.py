@@ -14,4 +14,3 @@ def isPalindrome(x):
         temp //= 10
     return reversedNum == x
 
-print(isPalindrome(123321))

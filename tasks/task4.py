@@ -8,5 +8,3 @@ def lengthOfLastWord(s):
         return len(words[-1])
     else:
         return 0
-
-print(lengthOfLastWord(""))

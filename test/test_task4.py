@@ -9,5 +9,5 @@ def test_with_error(s, exception):
 
 @pytest.mark.parametrize("s, result", [("123 321", 3),
                                        (" ", 0)])
-def test_isPalindrome(s, result):
+def test_lengthOfLastWord(s, result):
     assert lengthOfLastWord(s) == result
